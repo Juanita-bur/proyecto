@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+</head>
+<body>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+    <div class="bg-primary text-white p-5 text-center">
+        <h1>Vehiculos</h1>
+        <p></p>
+      </div>
+      <div class="container container-center">
+        <div class="row">
+          <div class="col-sm-4">
+            <h2>Ingresar</h2>
+            <button type="button" class="btn btn-primary"><a href="{% url 'login' %}" class="text text-white">Iniciar sesión</a></button>
+          </div>
+          <div class="col-sm-4">
+            <h2>Registrarse</h2>
+            <p>Para poder registrarse, le pedimos hable con su jefatura</p>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

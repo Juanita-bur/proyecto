@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+</head>
+<body>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  {% load crispy_forms_tags %}
+    <div class="bg-primary text-white p-5 text-center">
+        <h1>Iniciar Sesión</h1>
+    </div>
+    <div class="col-sm-4">
+      <form method="POST" class="container container-center">
+              {% csrf_token %}
+              {{ login_form|crispy }}
+              <button type="submit">Iniciar sesión</button>
+
+      </form>
+    </div>
+</body>
+</html>
